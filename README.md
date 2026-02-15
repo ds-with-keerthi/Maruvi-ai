@@ -4,7 +4,7 @@ Maruvi is an AI-powered prescription safety companion designed to help people un
 
 Users upload a prescription image, and Maruvi explains each medicine in simple language, shows active ingredients, safety precautions, dosage schedule, and generates reminders with multilingual voice support.
 
-Tagline: *Know the medicine you take.*
+Maruvi — சாப்பிடும் மருந்தை அறி (Know the medicine you take)
 
 ---
 
