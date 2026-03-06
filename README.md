@@ -1,88 +1,157 @@
-# Maruvi — AI Prescription Safety Assistant
+Maruvi — AI Prescription Safety Assistant
 
-Maruvi is an AI-powered prescription safety companion designed to help people understand the medicines they consume.
 
-Users upload a prescription image, and Maruvi explains each medicine in simple language, shows active ingredients, safety precautions, dosage schedule, and generates reminders with multilingual voice support.
+Maruvi is an AI-powered prescription safety companion that helps people understand the medicines they consume.
 
-Maruvi — சாப்பிடும் மருந்தை அறி (Know the medicine you take)
+Users simply upload a prescription image via WhatsApp, and Maruvi explains the medicines in simple language, provides safety precautions, generates reminder schedules, and even delivers multilingual voice guidance.
 
----
+Maruvi — சாப்பிடும் மருந்தை அறி
+"Know the medicine you take."
 
-## Problem Statement
+PROBLEM STATEMENT:
+Millions of patients struggle to understand prescriptions due to:
 
-Many people struggle to read prescriptions and understand medication instructions. This leads to missed doses, unsafe usage, and preventable health risks — especially among elderly and low-literacy populations in Bharat.
+1. Complex medical terminology
+2. Poor handwriting in prescriptions
+3. Lack of medical literacy
+4. Language barriers
+
+This often results in:
+- Missed doses
+- Unsafe medicine combinations
+- Medication misuse
+- Preventable health complications
+
+This issue is especially critical among:
+1. Elderly patients
+2. Rural populations
+3. Low-literacy communities
+4. Patients dependent on caregivers
 
 Maruvi bridges the gap between prescriptions and understanding.
 
----
+SOLUTION:
+Maruvi converts complex prescriptions into clear, understandable guidance for patients.
 
-## Solution Overview
+Using AI and AWS services, Maruvi can:
+1. Extract text from prescription images
+2. Identify medicines using AI
+3. Explain medicines in simple language
+4. Provide dosage and safety and allergy instructions
+5. Deliver multilingual voice explanations
+6. Shows online Buying options
 
-Maruvi uses AI to:
+Users interact with Maruvi through familiar messaging platforms such as WhatsApp.
 
-- Extract text from prescription images
-- Explain medicines in plain language
-- Show active chemical ingredients
-- Provide safety notes and precautions
-- Generate smart reminder schedules
-- Deliver multilingual voice guidance
-- Operate as a WhatsApp / Telegram chatbot
+SYSTEM ARCHITECTURE:
+User (WhatsApp / Telegram)
+            │
+            ▼
+        FastAPI Backend
+            │
+            ▼
+      Amazon Textract
+   (Prescription OCR)
+            │
+            ▼
+     Amazon Bedrock (Nova)
+   AI Medicine Understanding
+            │
+            ▼
+      Safety Intelligence Layer
+  (Allergy + Drug Interaction Checks)
+            │
+            ▼
+        Amazon Polly
+     Multilingual Voice Output
+            │
+            ▼
+      DynamoDB + S3 Storage
+   (Session + Audio Management)
 
-The system is built using a serverless AWS architecture for scalability and affordability.
-
----
-
-## Architecture Summary
-
-User → Chatbot → API Gateway → AWS Lambda  
-→ Textract (OCR) → Bedrock (AI reasoning) → Polly (Voice)  
-→ DynamoDB + S3 storage
-
----
-
-## Technologies Used
-
+TECHNOLOGIES USED:
+AI & ML
+- Amazon Bedrock (Nova Models)
 - Amazon Textract
-- Amazon Bedrock
-- AWS Polly
-- AWS Lambda
-- API Gateway
+
+Voice & Language
+- AWS Polly (Multilingual Speech)
+
+Cloud Infrastructure
+- Amazon EC2
 - DynamoDB
-- S3 Storage
-- Telegram / WhatsApp Bot API
+- Amazon S3
+
+Backend
+- FastAPI
 - Python (Boto3 SDK)
 
----
+Messaging Interface
+- Twilio WhatsApp API
 
-## Key Features
+DEMO:
+User sends prescription image on WhatsApp.
 
-- Prescription image scanning
-- Plain-language medicine explanation
-- Active ingredient transparency
-- Safety notes & precautions
-- AI-generated reminders
-- Voice guidance in regional languages
-- Caregiver-friendly design
+Maruvi responds:
+💊 Vomikind Syrup
+Purpose: Used to treat vomiting
+Dosage: 5ml
+Frequency: as needed
+Precautions: Do not exceed recommended dose. Use as directed by the doctor. Take 30 minutes before feeding.
+⚠ Allergy: Avoid if allergic to ondansetron or related medicines.
 
----
+🛒 Buy Online
+1mg:https://www.1mg.com/search/all?name=Vomikind%20Syrup
+PharmEasy:https://pharmeasy.in/search/all?name=Vomikind%20Syrup
+Netmeds:https://www.netmeds.com/catalogsearch/result?q=Vomikind%20Syrup
 
-## Future Scope
+⚠ General Safety Advice
 
+* Always follow the dosage prescribed by your doctor.
+* Complete the full course for antibiotics.
+* Do not self-medicate or stop medicines early.
+* Consult a doctor if symptoms worsen.
+
+Voice explanation is also sent via audio.
+
+INSTALLATION:
+Clone the repository:
+git clone https://github.com/ds-with-keerthi/Maruvi-ai.git
+cd Maruvi-ai
+
+Create virtual environment:
+python -m venv venv
+source venv/bin/activate
+
+Install dependencies:
+pip install -r requirements.txt
+
+Configure AWS credentials:
+aws configure
+Running the Application
+
+Start the FastAPI server:
+uvicorn whatsapp_bot:app --host 0.0.0.0 --port 8000
+
+The API will be available at:
+http://localhost:8000
+
+
+FUTURE SCOPE:
+Maruvi can evolve into a complete AI healthcare assistant with features such as:
 - Drug interaction safety alerts
-- Offline rural deployment
+- Caregiver monitoring dashboard
+- Offline deployment for rural healthcare
 - Government healthcare integration
-- Pharmacy verification system
-- AI-powered medicine authenticity checks
+- AI-based counterfeit medicine detection
+- Personalized medication adherence analytics
 
----
+DISCLAIMER:
+Maruvi provides educational guidance only and does not replace professional medical advice.
+Users must always follow instructions from licensed healthcare providers.
 
-## Disclaimer
-
-Maruvi provides educational guidance only and does not replace professional medical advice. Users should always follow instructions from licensed healthcare providers.
-
----
-
-## Team
-
-Team DSK  
+TEAM:
+Team DSK
 AI for Bharat Hackathon Submission
+
+Maruvi — Making medicine understanding simple for everyone.
