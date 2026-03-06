@@ -44,14 +44,14 @@ Users interact with Maruvi through familiar messaging platforms such as WhatsApp
 
 ## SYSTEM ARCHITECTURE:
 User (WhatsApp / Telegram)
-    -> FastAPI Backend (EC2)
-    -> Amazon Textract (OCR extraction)
-    -> Amazon Bedrock Nova (AI medicine understanding)
-    -> Safety Intelligence Layer (allergy + precautions + reminders)
-    -> Amazon Polly (voice explanation)
-    -> DynamoDB (session memory)
-    -> Amazon S3 (audio storage)
-    -> Response returned to user via WhatsApp
+- FastAPI Backend (EC2)
+- Amazon Textract (OCR extraction)
+- Amazon Bedrock Nova (AI medicine understanding)
+- Safety Intelligence Layer (allergy + precautions + reminders)
+- Amazon Polly (voice explanation)
+- DynamoDB (session memory)
+- Amazon S3 (audio storage)
+- Response returned to user via WhatsApp
 
 ## TECHNOLOGIES USED:
 AI & ML
