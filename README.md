@@ -1,5 +1,4 @@
-Maruvi — AI Prescription Safety Assistant
-
+### Maruvi — AI Prescription Safety Assistant
 
 Maruvi is an AI-powered prescription safety companion that helps people understand the medicines they consume.
 
@@ -8,7 +7,7 @@ Users simply upload a prescription image via WhatsApp, and Maruvi explains the m
 Maruvi — சாப்பிடும் மருந்தை அறி
 "Know the medicine you take."
 
-PROBLEM STATEMENT:
+# PROBLEM STATEMENT:
 Millions of patients struggle to understand prescriptions due to:
 
 1. Complex medical terminology
@@ -30,7 +29,7 @@ This issue is especially critical among:
 
 Maruvi bridges the gap between prescriptions and understanding.
 
-SOLUTION:
+# SOLUTION:
 Maruvi converts complex prescriptions into clear, understandable guidance for patients.
 
 Using AI and AWS services, Maruvi can:
@@ -69,7 +68,7 @@ User (WhatsApp / Telegram)
       DynamoDB + S3 Storage
    (Session + Audio Management)
 
-TECHNOLOGIES USED:
+# TECHNOLOGIES USED:
 AI & ML
 - Amazon Bedrock (Nova Models)
 - Amazon Textract
@@ -89,7 +88,7 @@ Backend
 Messaging Interface
 - Twilio WhatsApp API
 
-DEMO:
+# EXAMPLE:
 User sends prescription image on WhatsApp.
 
 Maruvi responds:
@@ -106,7 +105,6 @@ PharmEasy:https://pharmeasy.in/search/all?name=Vomikind%20Syrup
 Netmeds:https://www.netmeds.com/catalogsearch/result?q=Vomikind%20Syrup
 
 ⚠ General Safety Advice
-
 * Always follow the dosage prescribed by your doctor.
 * Complete the full course for antibiotics.
 * Do not self-medicate or stop medicines early.
@@ -114,7 +112,7 @@ Netmeds:https://www.netmeds.com/catalogsearch/result?q=Vomikind%20Syrup
 
 Voice explanation is also sent via audio.
 
-INSTALLATION:
+# INSTALLATION:
 Clone the repository:
 git clone https://github.com/ds-with-keerthi/Maruvi-ai.git
 cd Maruvi-ai
@@ -136,8 +134,7 @@ uvicorn whatsapp_bot:app --host 0.0.0.0 --port 8000
 The API will be available at:
 http://localhost:8000
 
-
-FUTURE SCOPE:
+# FUTURE SCOPE:
 Maruvi can evolve into a complete AI healthcare assistant with features such as:
 - Drug interaction safety alerts
 - Caregiver monitoring dashboard
@@ -146,12 +143,12 @@ Maruvi can evolve into a complete AI healthcare assistant with features such as:
 - AI-based counterfeit medicine detection
 - Personalized medication adherence analytics
 
-DISCLAIMER:
+# DISCLAIMER:
 Maruvi provides educational guidance only and does not replace professional medical advice.
 Users must always follow instructions from licensed healthcare providers.
 
-TEAM:
+# TEAM:
 Team DSK
 AI for Bharat Hackathon Submission
 
-Maruvi — Making medicine understanding simple for everyone.
+# Maruvi — Making medicine understanding simple for everyone.
