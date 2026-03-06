@@ -42,31 +42,16 @@ Using AI and AWS services, Maruvi can:
 
 Users interact with Maruvi through familiar messaging platforms such as WhatsApp.
 
-SYSTEM ARCHITECTURE:
+## SYSTEM ARCHITECTURE:
 User (WhatsApp / Telegram)
-            │
-            ▼
-        FastAPI Backend
-            │
-            ▼
-      Amazon Textract
-   (Prescription OCR)
-            │
-            ▼
-     Amazon Bedrock (Nova)
-   AI Medicine Understanding
-            │
-            ▼
-      Safety Intelligence Layer
-  (Allergy + Drug Interaction Checks)
-            │
-            ▼
-        Amazon Polly
-     Multilingual Voice Output
-            │
-            ▼
-      DynamoDB + S3 Storage
-   (Session + Audio Management)
+    -> FastAPI Backend (EC2)
+    -> Amazon Textract (OCR extraction)
+    -> Amazon Bedrock Nova (AI medicine understanding)
+    -> Safety Intelligence Layer (allergy + precautions + reminders)
+    -> Amazon Polly (voice explanation)
+    -> DynamoDB (session memory)
+    -> Amazon S3 (audio storage)
+    -> Response returned to user via WhatsApp
 
 ## TECHNOLOGIES USED:
 AI & ML
