@@ -1,0 +1,35 @@
+# Core
+python-dotenv==1.0.1
+requests==2.32.3
+
+# Data
+numpy==1.26.4
+pandas==2.2.2
+
+# OCR
+pytesseract==0.3.10
+Pillow==10.4.0
+opencv-python==4.10.0.84
+
+# AI (Compatible versions)
+openai==1.40.6
+
+# UI
+streamlit==1.37.1
+
+# Backend (future bot support)
+fastapi==0.112.0
+uvicorn==0.30.5
+
+# AWS (future integration)
+boto3==1.35.0
+python-dotenv==1.0.1
+
+python-telegram-bot==20.7
+
+# WhatsApp Connection
+twilio
+fastapi
+uvicorn
+requests
+python-multipart
